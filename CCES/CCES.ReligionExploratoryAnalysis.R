@@ -39,8 +39,8 @@ groupList = list( list(groupName="Catholic", fileName="catholic_voting",
 ageCuts = c(17, 30, 45, 60, 80, 105)
 numCuts = length(ageCuts)-1
 
-pdf(file="religious_voting_patterns.pdf", 
-    width=10, height=8, onefile=TRUE)
+png(file="religious_voting_patterns%03d.png", 
+    width=800, height=640)
 par(mfcol=c(2,2))
 for (i in 1:length(groupList)) {
   myGroup = groupList[[i]]$groupName
